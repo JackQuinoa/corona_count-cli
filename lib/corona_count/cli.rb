@@ -1,5 +1,7 @@
+#require "pry"
 class CoronaCount::CLI 
-  data = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
+  
+  attr_accessor :state, :positive, :recovered, :death
   
   def call 
     puts "Hello there, please find your state below."  
@@ -28,6 +30,7 @@ class CoronaCount::CLI
       when "1"
         states 
         count_by_state
+        another_state
       when "2"
         puts "Goodbye and stay safe!"
       end
