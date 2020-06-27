@@ -1,4 +1,5 @@
 class CoronaCount::CLI 
+  data = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
   
   def call 
     puts "Hello there, please find your state below."  
@@ -31,4 +32,5 @@ class CoronaCount::CLI
         puts "Goodbye and stay safe!"
       end
   end
+  
 end
