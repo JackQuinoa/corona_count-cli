@@ -5,7 +5,8 @@ class CoronaCount::CLI
   
 # attr_accessor :state, :positive, :recovered, :death
   
-# attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
+attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
+binding.pry
   
 #   def initialize(attributes)
 #     attributes.each {|key, value| self.send(("#{key}="), value)}
