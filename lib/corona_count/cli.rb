@@ -1,8 +1,7 @@
-require "coronacount/cli/version"
-
-module Coronacount
-  module Cli
-    class Error < StandardError; end
-    # Your code goes here...
+class CoronaCount::CLI 
+  
+  def call 
+    puts "Please select a state."    
   end
+
 end
