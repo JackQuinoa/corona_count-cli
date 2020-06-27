@@ -1,4 +1,4 @@
-module Coronacount
+module CoronaCount
   module Cli
     VERSION = "0.1.0"
   end

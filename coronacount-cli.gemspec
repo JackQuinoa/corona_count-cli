@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "coronacount/cli/version"
+require "corona_count/cli/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "coronacount-cli"
-  spec.version       = Coronacount::Cli::VERSION
+  spec.name          = "corona_count-cli"
+  spec.version       = CoronaCount::Cli::VERSION
   spec.authors       = ["'Jack Quinoa'"]
   spec.email         = ["'jquinoa208@gmail.com'"]
 
