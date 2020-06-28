@@ -3,30 +3,6 @@ require "httparty"
 
 class CoronaCount::CLI 
 
-
-attr_accessor :state, :positive, :recovered, :death
-  
-
-    
-# c = Car.new()
-# params.each do |key, value|
-#   c.send("#{key}=", value)
-  
-
-# attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
-#     binding.pry 
-#     attributes.each {|key, value| self.send if 
-#       key == state || key == positive || key == recovered || key == death then 
-#       ("#{key}=", value)}
-#     else nil 
-#     end
-
-  # ATTRIBUTES.each {|info_hash| 
-  #     state = info_hash["state"]
-  #     positive = info_hash["positive"]
-  #     recovered = info_hash["recovered"]
-  #     death = info_hash["death"]
-  
   def initialize
     call 
     binding.pry 
@@ -64,8 +40,4 @@ attr_accessor :state, :positive, :recovered, :death
       end
   end
   
-end
-
-# class APIManager 
-  
-# end
+end 
