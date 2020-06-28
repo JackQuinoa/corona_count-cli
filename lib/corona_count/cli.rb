@@ -2,7 +2,8 @@ require "pry"
 require "httparty"
 
 class CoronaCount::CLI 
-  
+
+Attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
 attr_accessor :state, :positive, :recovered, :death
   
 # attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
@@ -24,7 +25,7 @@ attr_accessor :state, :positive, :recovered, :death
 #     end
   
   def initialize
-   call 
+    call 
   end
   
   def call 
