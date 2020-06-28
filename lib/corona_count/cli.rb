@@ -6,11 +6,8 @@ class CoronaCount::CLI
 Attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
 attr_accessor :state, :positive, :recovered, :death
   
-# attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
-# binding.pry
-# def get_data 
+
     
-#   end
 # c = Car.new()
 # params.each do |key, value|
 #   c.send("#{key}=", value)
@@ -26,6 +23,7 @@ attr_accessor :state, :positive, :recovered, :death
   
   def initialize
     call 
+    binding.pry 
   end
   
   def call 
