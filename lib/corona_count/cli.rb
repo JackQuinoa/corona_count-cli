@@ -7,24 +7,28 @@ attr_accessor :state, :positive, :recovered, :death
   
 # attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
 # binding.pry
-  
-  def initialize
-    attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
-     binding.pry 
-    attributes.each {|key, value| self.send if 
-      key == state || key == positive || key == recovered || key == death then 
-      ("#{key}=", value)}
-    else nil 
-    end
-  end
-  
-def self.get_data 
+# def get_data 
+    
+#   end
 # c = Car.new()
 # params.each do |key, value|
 #   c.send("#{key}=", value)
   
+
+# attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
+#     binding.pry 
+#     attributes.each {|key, value| self.send if 
+#       key == state || key == positive || key == recovered || key == death then 
+#       ("#{key}=", value)}
+#     else nil 
+#     end
+  
+  def initialize
+   call 
+  end
+  
   def call 
-    puts "Hello there, please find your state below."  
+    puts "Hello there, please find and enter the number correlated with the state you'd like to view."  
     states 
     count_by_state
     another_state
@@ -35,8 +39,6 @@ def self.get_data
   end
   
   def count_by_state
-    puts "Enter the numebr correlated with 
-    the state you'd like to view."
     input = gets.strip 
     case input 
       when "1"
