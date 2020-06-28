@@ -1,0 +1,3 @@
+class CoronaCount::State
+
+end

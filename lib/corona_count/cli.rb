@@ -3,7 +3,7 @@ require "httparty"
 
 class CoronaCount::CLI 
 
-Attributes = HTTParty.get("https://covidtracking.com/api/v1/states/current.json")
+
 attr_accessor :state, :positive, :recovered, :death
   
 
@@ -20,6 +20,12 @@ attr_accessor :state, :positive, :recovered, :death
 #       ("#{key}=", value)}
 #     else nil 
 #     end
+
+  # ATTRIBUTES.each {|info_hash| 
+  #     state = info_hash["state"]
+  #     positive = info_hash["positive"]
+  #     recovered = info_hash["recovered"]
+  #     death = info_hash["death"]
   
   def initialize
     call 
@@ -59,3 +65,7 @@ attr_accessor :state, :positive, :recovered, :death
   end
   
 end
+
+# class APIManager 
+  
+# end
