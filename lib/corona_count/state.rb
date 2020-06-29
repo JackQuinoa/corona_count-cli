@@ -9,12 +9,14 @@ attr_accessor :state, :positive, :recovered, :death
   end
   
   def state_list 
-    APIMananger.get_states
+    puts self.state 
     
   end
   
   def state_count
-    APIMananger.get_states_data 
+    puts self.positive 
+         self.recovered
+         self.death 
   end
   
   
