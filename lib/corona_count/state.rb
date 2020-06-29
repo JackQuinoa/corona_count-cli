@@ -8,9 +8,9 @@ attr_accessor :state, :positive, :recovered, :death
     @@all << self 
   end
   
-  def state_list 
-    puts self.state 
-    
+  def self.state_list 
+    # puts self.state 
+    puts "HELLO!"
   end
   
   def state_count

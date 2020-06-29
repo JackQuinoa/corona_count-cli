@@ -16,7 +16,7 @@ class CoronaCount::CLI
   end
   
   def states 
-    State.state_list
+    CoronaCount::State.state_list
   end
   
   def count_by_state
