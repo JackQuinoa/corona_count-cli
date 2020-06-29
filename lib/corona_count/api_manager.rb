@@ -17,6 +17,7 @@ ATTRIBUTES = HTTParty.get("https://covidtracking.com/api/v1/states/current.json"
     recovered = info_hash["recovered"]
     death = info_hash["death"]
     CoronaCount::State.new(state, positive, recovered, death)
+    
     }
   end
 
