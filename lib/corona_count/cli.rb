@@ -1,8 +1,11 @@
 require "pry"
 require "httparty"
 
+
+
 class CoronaCount::CLI 
 
+  
   # def initialize
   #   call 
   #   binding.pry 
@@ -10,13 +13,13 @@ class CoronaCount::CLI
   
   def call 
     puts "Hello there, please find and enter the number correlated with the state you'd like to view."  
-    states 
+    get_states 
     count_by_state
     another_state
   end
   
-  def states 
-    CoronaCount::State.state_list
+  def get_states 
+    CoronaCount::APIManager.get_states_data
   end
   
   def count_by_state
