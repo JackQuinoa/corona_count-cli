@@ -12,11 +12,9 @@ class CoronaCount::CLI
   end
   
   def get_states 
-    number = 1
-    CoronaCount::APIManager.get_states_data.each do |hash| 
-      puts "#{number}. #{hash["state"]}"
-      number += 1 
-      end
+    CoronaCount::APIManager.get_states_data.each_with_index do |hash, index| 
+      puts "#{index + 1}. #{hash["state"]}"
+    end
   end
   
   def count_by_state
