@@ -2,15 +2,8 @@ require "pry"
 require "httparty"
 
 
-
 class CoronaCount::CLI 
 
-  
-  # def initialize
-  #   call 
-  #   binding.pry 
-  # end
-  
   def call 
     puts "Hello there, please find and enter the number correlated with the state you'd like to view."  
     get_states 
@@ -24,14 +17,13 @@ class CoronaCount::CLI
       puts "#{number}. #{hash["state"]}"
       number += 1 
       end
-      
   end
   
   def count_by_state
     input = gets.strip 
     case input 
-      when "1"
-        puts "cases for 1"
+      when  "1" 
+      CoronaCount::State.state_count
     end
   end
   
@@ -40,12 +32,10 @@ class CoronaCount::CLI
     input = gets.strip
     case input 
       when "1"
-        states 
-        count_by_state
-        another_state
+       call 
       when "2"
         puts "Goodbye and stay safe!"
-      end
+    end
   end
   
 end 

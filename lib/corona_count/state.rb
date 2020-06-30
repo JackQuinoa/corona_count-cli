@@ -5,23 +5,19 @@ attr_accessor :state, :positive, :recovered, :death
 
   def initialize(state, positive, recovered, death)
     @state, @positive, @recovered, @death = state, positive, recovered, death
+    save 
+  end
+   
+  def save
     @@all << self 
-  end
-  
-  def self.state_list 
-    puts @state
-    puts "HELLO!"
-  end
+  end 
   
   def self.all 
     @@all 
   end
   
   def self.state_count
-    puts self.positive 
-         self.recovered
-         self.death 
+     puts "HI"
   end
-  
-  
+ 
 end
