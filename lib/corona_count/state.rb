@@ -17,7 +17,8 @@ attr_accessor :state, :positive, :recovered, :death
   end
   
   def self.state_count
-     @@all.each {|instance| puts "#{instance.positive}"}
+    selection = @@all.detect {|instance| instance.state == "AK" }
+    puts "#{selection.positive}"
   end
  
 end
