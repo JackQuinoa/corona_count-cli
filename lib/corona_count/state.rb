@@ -4,8 +4,7 @@ attr_accessor :state, :positive, :recovered, :death
 @@all = []
 
   def initialize(state, positive, recovered, death)
-    @state, @positive, @recovered, @death = state, positive, recovered, death
-    save 
+    @state, @positive, @recovered, @death = state, positive, recovered, death 
   end
    
   def save
