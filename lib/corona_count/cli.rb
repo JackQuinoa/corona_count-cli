@@ -37,7 +37,7 @@ class CoronaCount::CLI
     input = gets.strip
     case input 
       when "1"
-       call 
+        call 
       when "2"
         puts "Goodbye and stay safe!"
     end
