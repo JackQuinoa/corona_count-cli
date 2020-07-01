@@ -16,10 +16,8 @@ attr_accessor :state, :positive, :recovered, :death
   end
   
   def self.state_count(input)
-    @@all.each_with_index do |hash, index| 
-      if index == input 
-      puts "Cases for #{hash.state} - Positive Cases : #{hash.positive}. Recovered Cases : #{hash.recovered}. Death Count : #{hash.death}."
-      end
-    end
+    state = @@all[input]
+    "Cases for #{state.state} - Positive Cases : #{state.positive}. Recovered Cases : #{state.recovered}. Death Count : #{state.death}."
   end
+  
 end
