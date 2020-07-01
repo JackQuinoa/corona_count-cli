@@ -5,7 +5,7 @@ require "httparty"
 class CoronaCount::CLI 
 
   def call 
-    puts "Hello there, please find and enter the number correlated with the state you'd like to view."  
+    puts "Hello there, please find and enter the number correlated with the state/territory you'd like to view."  
     get_states 
     count_by_state
     another_state
