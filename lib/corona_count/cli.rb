@@ -21,16 +21,17 @@ class CoronaCount::CLI
   end
   
   def count_by_state
-    input = gets.strip
-    case input 
-      when  "1"
+    input = gets.strip.to_i
+    # case input 
+    #   when  "1"
         
-    # input.to_i
-    # input - 1 
+
+    input - 1 
+        
         ##input is now equal to the hash's index in the @@all array in state class 
     
         CoronaCount::State.state_count(input)
-      end
+
   end
   
   def another_state 
