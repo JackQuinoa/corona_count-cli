@@ -6,7 +6,7 @@ class CoronaCount::CLI
   
   def initialize 
     puts "Hello there, please find and enter the number correlated with the state/territory you'd like to view."  
-      sleep 4 
+    sleep 4 
   end
   
   def call 
@@ -17,14 +17,13 @@ class CoronaCount::CLI
   
   def get_states 
     CoronaCount::APIManager.get_states_data if CoronaCount::State.all.empty?
-    CoronaCount::State.all.each_with_index do |state, index| 
-      puts "#{index + 1}. #{state.state}"
-    end
+    CoronaCount::State.all.each_with_index {|state, index| 
+      puts "#{index + 1}. #{state.state}"}
   end
   
   def count_by_state
     input = gets.strip.to_i - 1 
-    if input.between?(1,56)
+    if input.between?(0,55)
       response =  CoronaCount::State.state_count(input)
       puts response 
     else 
