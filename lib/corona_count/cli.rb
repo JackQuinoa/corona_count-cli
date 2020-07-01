@@ -3,9 +3,12 @@ require "httparty"
 
 
 class CoronaCount::CLI 
-
-  def call 
+  
+  def initialize 
     puts "Hello there, please find and enter the number correlated with the state/territory you'd like to view."  
+  end
+  
+  def call 
     get_states 
     count_by_state
     another_state
@@ -19,9 +22,9 @@ class CoronaCount::CLI
   
   def count_by_state
     input = gets.strip 
-    case input 
-      when  "1" 
-      CoronaCount::State.state_count
+    case input
+      when "1"
+        CoronaCount::State.state_count
     end
   end
   
