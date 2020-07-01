@@ -16,7 +16,16 @@ attr_accessor :state, :positive, :recovered, :death
     @@all 
   end
   
-  def self.state_count
+  def self.state_count(input)
+  #   @@all.each_with_index {|hash, index| 
+  #     if index == input 
+  #     puts "Cases for #{hash.state} - Positive Cases : #{hash.positive}. Recovered Cases : #{hash.recovered}. Death Count : #{hash.death}."
+  #     else 
+  #       puts "That number isn't correlated to a state/territory."
+  #     end
+  #   }
+  # end
+      
     selection = @@all.detect {|instance| instance.state == "AK" }
     puts "Cases for #{selection.state} - Positive Cases : #{selection.positive}. Recovered Cases : #{selection.recovered}. Death Count : #{selection.death}."
   end
